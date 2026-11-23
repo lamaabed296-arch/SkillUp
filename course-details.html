@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تفاصيل الكورس ومخرجات التعلّم والمنهج على SkillUp.">
+    <meta name="theme-color" content="#F8F6F1">
+    <title>تفاصيل الدورة | SkillUp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/course-details.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/course-details.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header__inner">
+            <a class="brand" href="index.html#home" aria-label="SkillUp، الصفحة الرئيسية">
+                <span class="brand__mark" aria-hidden="true">S</span>
+                <span class="brand__name">Skill<span>Up</span></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false"
+                aria-controls="primary-navigation" data-menu-toggle>
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="site-nav" id="primary-navigation" aria-label="التنقل الرئيسي" data-site-nav>
+                <ul class="site-nav__list">
+                    <li><a class="site-nav__link" href="index.html#home">الرئيسية</a></li>
+                    <li><a class="site-nav__link" href="courses.html" aria-current="page">الكورسات</a></li>
+                    <li><a class="site-nav__link" href="index.html#why-skillup">عن المنصة</a></li>
+                    <li><a class="site-nav__link" href="index.html#contact">تواصل معنا</a></li>
+                </ul>
+                <div class="site-nav__mobile-actions">
+                    <a class="button button--outline" href="login.html">تسجيل الدخول</a>
+                    <a class="button button--primary" href="register.html">إنشاء حساب</a>
+                </div>
+            </nav>
+
+            <div class="header__actions">
+                <a class="header__login" href="login.html">تسجيل الدخول</a>
+                <a class="button button--primary header__signup" href="register.html">إنشاء حساب</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="course-detail-page">
+        <div class="container">
+            <nav class="course-detail__breadcrumb" aria-label="مسار التنقل">
+                <a href="index.html#home">الرئيسية</a>
+                <span aria-hidden="true">/</span>
+                <a href="courses.html">الكورسات</a>
+                <span aria-hidden="true">/</span>
+                <span data-course-breadcrumb>تفاصيل الكورس</span>
+            </nav>
+
+            <section class="course-detail__error" data-course-error role="alert" hidden>
+                <p class="eyebrow">لم نتمكن من فتح الكورس</p>
+                <h1 data-course-error-title>تعذر العثور على الكورس</h1>
+                <p data-course-error-message></p>
+                <a class="button button--primary" href="courses.html">العودة إلى الكورسات</a>
+            </section>
+
+            <article class="course-detail" data-course-view hidden>
+                <header class="course-detail__hero">
+                    <div class="course-detail__intro">
+                        <span class="badge badge--gold" data-course-category></span>
+                        <h1 class="course-detail__title" data-course-title></h1>
+                        <p class="course-detail__description" data-course-description></p>
+
+                        <dl class="course-detail__facts">
+                            <div class="course-detail__fact">
+                                <dt>المستوى</dt>
+                                <dd data-course-level></dd>
+                            </div>
+                            <div class="course-detail__fact">
+                                <dt>المدة</dt>
+                                <dd data-course-duration></dd>
+                            </div>
+                            <div class="course-detail__fact" data-course-lesson-fact>
+                                <dt>عدد الدروس</dt>
+                                <dd data-course-lesson-count></dd>
+                            </div>
+                            <div class="course-detail__fact" data-course-rating-fact>
+                                <dt>التقييم</dt>
+                                <dd data-course-rating></dd>
+                            </div>
+                            <div class="course-detail__fact" data-course-instructor-fact>
+                                <dt>المدرب</dt>
+                                <dd data-course-instructor></dd>
+                            </div>
+                        </dl>
+
+                        <div class="course-detail__enroll">
+                            <p class="course-detail__price" data-course-price></p>
+                            <div class="course-detail__actions">
+                                <button class="button button--primary" type="button" data-course-enroll>
+                                    الالتحاق بالكورس
+                                </button>
+                                <a class="button button--outline" href="courses.html">العودة إلى الكورسات</a>
+                            </div>
+                            <p class="course-detail__enroll-message" data-course-enroll-message role="status"
+                                aria-live="polite" hidden></p>
+                        </div>
+                    </div>
+
+                    <figure class="course-detail__media">
+                        <img data-course-image alt="" decoding="async">
+                        <figcaption data-course-image-caption></figcaption>
+                    </figure>
+                </header>
+
+                <div class="course-detail__sections">
+                    <section class="course-detail__section" aria-labelledby="course-outcomes-title"
+                        data-course-outcomes-section>
+                        <p class="eyebrow">ما الذي ستكتسبه؟</p>
+                        <h2 id="course-outcomes-title">مخرجات التعلّم</h2>
+                        <ul class="course-detail__outcomes" data-course-outcomes></ul>
+                    </section>
+
+                    <section class="course-detail__section course-detail__curriculum"
+                        aria-labelledby="course-curriculum-title" data-course-curriculum-section>
+                        <p class="eyebrow">خطتك التعليمية</p>
+                        <h2 id="course-curriculum-title">منهج الكورس</h2>
+                        <div class="course-detail__modules" data-course-curriculum></div>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand-block">
+                    <a class="brand brand--footer" href="index.html#home" aria-label="SkillUp، الصفحة الرئيسية">
+                        <span class="brand__mark" aria-hidden="true">S</span>
+                        <span class="brand__name">Skill<span>Up</span></span>
+                    </a>
+                    <p>نؤمن أن المعرفة الجيدة قادرة على تغيير المسار. ابدأ تعلّمك معنا، واصنع خطوتك التالية.</p>
+                </div>
+                <div class="footer__column">
+                    <h2>روابط سريعة</h2>
+                    <ul>
+                        <li><a href="index.html#home">الرئيسية</a></li>
+                        <li><a href="courses.html">الكورسات</a></li>
+                        <li><a href="index.html#why-skillup">عن SkillUp</a></li>
+                        <li><a href="index.html#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column footer__contact">
+                    <h2>تواصل معنا</h2>
+                    <ul>
+                        <li><a href="mailto:hello@skillup.sa">hello@skillup.sa</a></li>
+                        <li><a href="tel:+966111234567" dir="ltr">+966 11 123 4567</a></li>
+                        <li><span>الرياض، المملكة العربية السعودية</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 SkillUp. جميع الحقوق محفوظة.</p>
+                <a href="register.html">انضم إلى مجتمع SkillUp</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

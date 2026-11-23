@@ -1,0 +1,191 @@
+body.auth-page {
+    min-block-size: 100vh;
+    background:
+        radial-gradient(ellipse at 92% 8%, rgb(232 220 200 / 34%), transparent 30%),
+        radial-gradient(ellipse at 8% 92%, rgb(185 154 112 / 10%), transparent 28%),
+        var(--color-background);
+}
+
+.auth-shell {
+    display: flex;
+    width: min(calc(100% - var(--container-gutter) * 2), 34rem);
+    min-block-size: 100vh;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin-inline: auto;
+    padding-block: var(--space-10);
+}
+
+.auth-brand {
+    align-self: center;
+    margin-block-end: var(--space-6);
+}
+
+.auth-card {
+    width: 100%;
+    padding: var(--space-8);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-md);
+}
+
+.auth-card__heading {
+    margin-block-end: var(--space-6);
+}
+
+.auth-card__heading .eyebrow {
+    margin-block-end: var(--space-2);
+}
+
+.auth-card__title {
+    font-size: var(--font-size-2xl);
+}
+
+.auth-card__description {
+    margin-block-start: var(--space-2);
+    color: var(--color-muted);
+}
+
+.auth-form {
+    display: grid;
+    gap: var(--space-4);
+}
+
+.auth-field {
+    gap: var(--space-2);
+}
+
+.auth-password {
+    position: relative;
+    min-inline-size: 0;
+}
+
+.auth-password .input {
+    padding-inline-start: 5.5rem;
+}
+
+.auth-password__toggle {
+    position: absolute;
+    inset-inline-start: var(--space-2);
+    inset-block-start: 50%;
+    min-inline-size: 3.75rem;
+    min-block-size: 2.25rem;
+    padding-inline: var(--space-2);
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: var(--radius-sm);
+    background-color: transparent;
+    color: #806544;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+}
+
+.auth-password__toggle:hover {
+    background-color: rgb(232 220 200 / 45%);
+}
+
+.auth-field__error {
+    color: var(--color-danger);
+    font-size: var(--font-size-xs);
+}
+
+.auth-field__error[hidden],
+.auth-message[hidden] {
+    display: none;
+}
+
+.auth-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+}
+
+.auth-checkbox {
+    display: inline-flex;
+    min-block-size: 2.75rem;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+}
+
+.auth-checkbox input {
+    inline-size: 1rem;
+    block-size: 1rem;
+    margin: 0;
+    accent-color: var(--color-gold);
+}
+
+.auth-link {
+    color: #806544;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+}
+
+.auth-link:hover,
+.auth-home-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.auth-submit {
+    width: 100%;
+    min-block-size: 3rem;
+    margin-block-start: var(--space-2);
+}
+
+.auth-message {
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+}
+
+.auth-message--muted {
+    color: var(--color-muted);
+}
+
+.auth-message--error {
+    border-color: rgb(161 61 54 / 30%);
+    color: var(--color-danger);
+}
+
+.auth-message--success {
+    border-color: rgb(23 43 58 / 20%);
+    background-color: rgb(232 220 200 / 35%);
+    color: var(--color-primary);
+}
+
+.auth-switch {
+    margin-block-start: var(--space-6);
+    color: var(--color-muted);
+    font-size: var(--font-size-sm);
+    text-align: center;
+}
+
+.auth-home-link {
+    align-self: center;
+    margin-block-start: var(--space-4);
+    color: var(--color-muted);
+    font-size: var(--font-size-xs);
+    text-decoration: none;
+}
+
+@media (max-width: 40rem) {
+    .auth-shell {
+        width: min(calc(100% - var(--space-8) * 2), 34rem);
+        padding-block: var(--space-6);
+    }
+
+    .auth-card {
+        padding: var(--space-6) var(--space-5);
+    }
+}

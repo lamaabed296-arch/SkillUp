@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SkillUp منصة عربية للتعلم عبر الإنترنت، اكتشف دورات عملية وابدأ تطوير مهاراتك اليوم.">
+    <meta name="theme-color" content="#F8F6F1">
+    <title>SkillUp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <symbol id="icon-code" viewBox="0 0 24 24">
+            <path d="m8 8-4 4 4 4M16 8l4 4-4 4m-3-11-2 14" />
+        </symbol>
+        <symbol id="icon-design" viewBox="0 0 24 24">
+            <path d="m12 19 7-7 2 2-7 7-2-2ZM18 13l-7-7-7 7 7 7M7 6l2-2 7 7-2 2M4 20h7" />
+        </symbol>
+        <symbol id="icon-marketing" viewBox="0 0 24 24">
+            <path d="m3 11 18-5v12L3 13v-2ZM5 14l2 6h4l-2-5m10-7v10" />
+        </symbol>
+        <symbol id="icon-business" viewBox="0 0 24 24">
+            <rect x="3" y="7" width="18" height="13" rx="2" />
+            <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m-13 5h18m-11 0v2h4v-2" />
+        </symbol>
+        <symbol id="icon-language" viewBox="0 0 24 24">
+            <path d="M4 5h12M10 3v2m4 0c-.5 5-3 8-8 10m1-7c1 3 4 6 7 7m-2 5 4-10 4 10m-6-3h4" />
+        </symbol>
+        <symbol id="icon-ai" viewBox="0 0 24 24">
+            <path
+                d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Zm7 12 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15ZM5 3l.7 1.3L7 5l-1.3.7L5 7l-.7-1.3L3 5l1.3-.7L5 3Z" />
+        </symbol>
+        <symbol id="icon-book" viewBox="0 0 24 24">
+            <path
+                d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 1 4 17.5v-12ZM4 17.5A2.5 2.5 0 0 1 6.5 15H20M8 7h8m-8 4h6" />
+        </symbol>
+        <symbol id="icon-users" viewBox="0 0 24 24">
+            <path
+                d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-13a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm4 2a4 4 0 0 0 0-8m4 19v-2a4 4 0 0 0-3-3.87" />
+        </symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 2" />
+        </symbol>
+        <symbol id="icon-star" viewBox="0 0 24 24">
+            <path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z" />
+        </symbol>
+        <symbol id="icon-arrow" viewBox="0 0 24 24">
+            <path d="M19 12H5m7 7-7-7 7-7" />
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24">
+            <path d="m5 12 4 4L19 6" />
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <path d="m3 7 9 6 9-6" />
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24">
+            <path d="M7 3H5a2 2 0 0 0-2 2c0 8.8 7.2 16 16 16a2 2 0 0 0 2-2v-2l-5-2-2 3a14 14 0 0 1-6-6l3-2-2-5Z" />
+        </symbol>
+        <symbol id="icon-location" viewBox="0 0 24 24">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+            <circle cx="12" cy="10" r="2.5" />
+        </symbol>
+    </svg>
+
+    <header class="site-header">
+        <div class="container header__inner">
+            <a class="brand" href="#home" aria-label="SkillUp، الصفحة الرئيسية">
+                <span class="brand__mark" aria-hidden="true">S</span>
+                <span class="brand__name">Skill<span>Up</span></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false"
+                aria-controls="primary-navigation" data-menu-toggle>
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="site-nav" id="primary-navigation" aria-label="التنقل الرئيسي" data-site-nav>
+                <ul class="site-nav__list">
+                    <li><a class="site-nav__link" href="#home" aria-current="page">الرئيسية</a></li>
+                    <li><a class="site-nav__link" href="courses.html">الكورسات</a></li>
+                    <li><a class="site-nav__link" href="#why-skillup">عن المنصة</a></li>
+                    <li><a class="site-nav__link" href="#contact">تواصل معنا</a></li>
+                </ul>
+                <div class="site-nav__mobile-actions">
+                    <a class="button button--outline" href="login.html">تسجيل الدخول</a>
+                    <a class="button button--primary" href="register.html">إنشاء حساب</a>
+                </div>
+            </nav>
+
+            <div class="header__actions">
+                <a class="header__login" href="login.html">تسجيل الدخول</a>
+                <a class="button button--primary header__signup" href="register.html">إنشاء حساب</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="container hero__layout">
+                <div class="hero__content">
+                    <p class="eyebrow"><span class="eyebrow__dot"></span> تعلّم يواكب طموحك</p>
+                    <h1 class="hero__title" id="hero-title">مهارة جديدة اليوم، <span>فرصة أكبر غداً.</span></h1>
+                    <p class="hero__description">مسارات عملية وخبرات حقيقية تساعدك على بناء مستقبل مهني تحبه، خطوة بخطوة
+                        وبالوتيرة التي تناسبك.</p>
+                    <div class="hero__actions">
+                        <a class="button button--primary" href="#courses">اكتشف الكورسات <svg class="icon"
+                                aria-hidden="true">
+                                <use href="#icon-arrow"></use>
+                            </svg></a>
+                        <a class="hero__text-link" href="#categories">ابدأ رحلة التعلّم</a>
+                    </div>
+                    <div class="hero__social-proof">
+                        <div class="avatar-stack" aria-hidden="true">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=72&amp;h=72&amp;q=80"
+                                alt="">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=72&amp;h=72&amp;q=80"
+                                alt="">
+                            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=crop&amp;w=72&amp;h=72&amp;q=80"
+                                alt="">
+                        </div>
+                        <p><strong>12,000+</strong><span>متعلّم يطوّر مهاراته معنا</span></p>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <img class="hero__image"
+                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                        alt="طلاب يتشاركون التعلم والعمل على مشروع">
+                    <div class="hero__note">
+                        <span class="hero__note-icon"><svg class="icon" aria-hidden="true">
+                                <use href="#icon-check"></use>
+                            </svg></span>
+                        <span><strong>تعلّم بطريقتك</strong><small>محتوى عملي، ونتائج ملموسة</small></span>
+                    </div>
+                    <span class="hero__image-caption">معرفة تصنع فرقاً</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats" aria-label="أرقام SkillUp">
+            <div class="container stats__grid">
+                <div class="stat"><span class="stat__value">350<span>+</span></span><span class="stat__label">كورس
+                        متخصص</span></div>
+                <div class="stat"><span class="stat__value">12,000<span>+</span></span><span class="stat__label">متعلّم
+                        طموح</span></div>
+                <div class="stat"><span class="stat__value">48</span><span class="stat__label">مدرباً خبيراً</span>
+                </div>
+                <div class="stat"><span class="stat__value">1.2M</span><span class="stat__label">ساعة تعلّم</span></div>
+            </div>
+        </section>
+
+        <section class="section categories" id="categories" aria-labelledby="categories-title">
+            <div class="container">
+                <div class="section-heading section-heading--row">
+                    <div>
+                        <p class="eyebrow">مساحة واسعة للنمو</p>
+                        <h2 class="section-title" id="categories-title">تعلّم في المجال الذي يلهمك</h2>
+                        <p class="section-description">اختر مجالاً، واكتشف مهارات تفتح لك آفاقاً جديدة.</p>
+                    </div>
+                    <a class="section-link" href="#courses">كل الكورسات <svg class="icon" aria-hidden="true">
+                            <use href="#icon-arrow"></use>
+                        </svg></a>
+                </div>
+                <div class="categories__grid">
+                    <article class="category-card">
+                        <span class="category-card__icon category-card__icon--blue"><svg class="icon"
+                                aria-hidden="true">
+                                <use href="#icon-code"></use>
+                            </svg></span>
+                        <h3>البرمجة</h3>
+                        <p>ابنِ منتجات رقمية من فكرتك الأولى.</p>
+                    </article>
+                    <article class="category-card">
+                        <span class="category-card__icon category-card__icon--gold"><svg class="icon"
+                                aria-hidden="true">
+                                <use href="#icon-design"></use>
+                            </svg></span>
+                        <h3>التصميم</h3>
+                        <p>حوّل الأفكار إلى تجارب بصرية مؤثرة.</p>
+                    </article>
+                    <article class="category-card">
+                        <span class="category-card__icon category-card__icon--green"><svg class="icon"
+                                aria-hidden="true">
+                                <use href="#icon-marketing"></use>
+                            </svg></span>
+                        <h3>التسويق الرقمي</h3>
+                        <p>اصنع حضوراً يصل إلى الجمهور المناسب.</p>
+                    </article>
+                    <article class="category-card">
+                        <span class="category-card__icon category-card__icon--rose"><svg class="icon"
+                                aria-hidden="true">
+                                <use href="#icon-business"></use>
+                            </svg></span>
+                        <h3>الأعمال والإدارة</h3>
+                        <p>قد مشاريعك بثقة وقرارات أوضح.</p>
+                    </article>
+                    <article class="category-card">
+                        <span class="category-card__icon category-card__icon--sand"><svg class="icon"
+                                aria-hidden="true">
+                                <use href="#icon-language"></use>
+                            </svg></span>
+                        <h3>اللغات</h3>
+                        <p>وسّع تواصلك وفرصك حول العالم.</p>
+                    </article>
+                    <article class="category-card">
+                        <span class="category-card__icon category-card__icon--dark"><svg class="icon"
+                                aria-hidden="true">
+                                <use href="#icon-ai"></use>
+                            </svg></span>
+                        <h3>الذكاء الاصطناعي</h3>
+                        <p>افهم أدوات المستقبل وابدأ باستخدامها.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section courses" id="courses" aria-labelledby="courses-title">
+            <div class="container">
+                <div class="section-heading section-heading--row">
+                    <div>
+                        <p class="eyebrow">اختيارات تستحق وقتك</p>
+                        <h2 class="section-title" id="courses-title">كورسات مميزة</h2>
+                        <p class="section-description">محتوى منتقى بعناية، يوازن بين المعرفة والتطبيق.</p>
+                    </div>
+                    <a class="section-link" href="courses.html">استكشف جميع الكورسات <svg class="icon"
+                            aria-hidden="true">
+                            <use href="#icon-arrow"></use>
+                        </svg></a>
+                </div>
+                <div class="courses__grid">
+                    <article class="card card--interactive course-card">
+                        <a class="course-card__image-link" href="course-details.html?id=modern-frontend"
+                            aria-label="تفاصيل كورس تطوير الواجهات الحديثة">
+                            <img class="course-card__image"
+                                src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&amp;fit=crop&amp;w=700&amp;h=440&amp;q=85"
+                                alt="شيفرة برمجية على شاشة حاسوب" loading="lazy">
+                            <span class="badge course-card__badge">الأكثر طلباً</span>
+                        </a>
+                        <div class="course-card__body">
+                            <div class="course-card__meta"><span>البرمجة</span><span class="course-card__rating"><svg
+                                        class="icon icon--star" aria-hidden="true">
+                                        <use href="#icon-star"></use>
+                                    </svg> 4.9</span></div>
+                            <h3 class="course-card__title"><a href="course-details.html?id=modern-frontend">تطوير
+                                    الواجهات الحديثة</a></h3>
+                            <p class="course-card__instructor">مع أحمد السالم</p>
+                            <div class="course-card__footer"><span class="course-card__price">249
+                                    <small>ر.س</small></span><a class="course-card__link"
+                                    href="course-details.html?id=modern-frontend">التفاصيل <svg class="icon"
+                                        aria-hidden="true">
+                                        <use href="#icon-arrow"></use>
+                                    </svg></a></div>
+                        </div>
+                    </article>
+                    <article class="card card--interactive course-card">
+                        <a class="course-card__image-link" href="course-details.html?id=ux-design"
+                            aria-label="تفاصيل كورس مبادئ تصميم تجربة المستخدم">
+                            <img class="course-card__image"
+                                src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&amp;fit=crop&amp;w=700&amp;h=440&amp;q=85"
+                                alt="مساحة عمل لتصميم تجربة رقمية" loading="lazy">
+                            <span class="badge badge--gold course-card__badge">مسار إبداعي</span>
+                        </a>
+                        <div class="course-card__body">
+                            <div class="course-card__meta"><span>التصميم</span><span class="course-card__rating"><svg
+                                        class="icon icon--star" aria-hidden="true">
+                                        <use href="#icon-star"></use>
+                                    </svg> 4.8</span></div>
+                            <h3 class="course-card__title"><a href="course-details.html?id=ux-design">مبادئ تصميم تجربة
+                                    المستخدم</a>
+                            </h3>
+                            <p class="course-card__instructor">مع نورة الحربي</p>
+                            <div class="course-card__footer"><span class="course-card__price">199
+                                    <small>ر.س</small></span><a class="course-card__link"
+                                    href="course-details.html?id=ux-design">التفاصيل <svg class="icon"
+                                        aria-hidden="true">
+                                        <use href="#icon-arrow"></use>
+                                    </svg></a></div>
+                        </div>
+                    </article>
+                    <article class="card card--interactive course-card">
+                        <a class="course-card__image-link" href="course-details.html?id=content-marketing"
+                            aria-label="تفاصيل كورس التسويق بالمحتوى">
+                            <img class="course-card__image"
+                                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=700&amp;h=440&amp;q=85"
+                                alt="فريق يناقش استراتيجية تسويقية" loading="lazy">
+                            <span class="badge badge--dark course-card__badge">تطبيق عملي</span>
+                        </a>
+                        <div class="course-card__body">
+                            <div class="course-card__meta"><span>التسويق الرقمي</span><span
+                                    class="course-card__rating"><svg class="icon icon--star" aria-hidden="true">
+                                        <use href="#icon-star"></use>
+                                    </svg> 4.9</span></div>
+                            <h3 class="course-card__title"><a href="course-details.html?id=content-marketing">التسويق
+                                    بالمحتوى من الصفر</a>
+                            </h3>
+                            <p class="course-card__instructor">مع خالد العتيبي</p>
+                            <div class="course-card__footer"><span class="course-card__price">179
+                                    <small>ر.س</small></span><a class="course-card__link"
+                                    href="course-details.html?id=content-marketing">التفاصيل <svg class="icon"
+                                        aria-hidden="true">
+                                        <use href="#icon-arrow"></use>
+                                    </svg></a></div>
+                        </div>
+                    </article>
+                    <article class="card card--interactive course-card">
+                        <a class="course-card__image-link" href="course-details.html?id=ai-foundations"
+                            aria-label="تفاصيل كورس أساسيات الذكاء الاصطناعي">
+                            <img class="course-card__image"
+                                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=700&amp;h=440&amp;q=85"
+                                alt="تصوير مفاهيمي لتقنيات الذكاء الاصطناعي" loading="lazy">
+                            <span class="badge badge--gold course-card__badge">حديث</span>
+                        </a>
+                        <div class="course-card__body">
+                            <div class="course-card__meta"><span>الذكاء الاصطناعي</span><span
+                                    class="course-card__rating"><svg class="icon icon--star" aria-hidden="true">
+                                        <use href="#icon-star"></use>
+                                    </svg> 5.0</span></div>
+                            <h3 class="course-card__title"><a href="course-details.html?id=ai-foundations">أساسيات
+                                    الذكاء الاصطناعي</a>
+                            </h3>
+                            <p class="course-card__instructor">مع ريم القحطاني</p>
+                            <div class="course-card__footer"><span class="course-card__price">229
+                                    <small>ر.س</small></span><a class="course-card__link"
+                                    href="course-details.html?id=ai-foundations">التفاصيل <svg class="icon"
+                                        aria-hidden="true">
+                                        <use href="#icon-arrow"></use>
+                                    </svg></a></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section why" id="why-skillup" aria-labelledby="why-title">
+            <div class="container why__layout">
+                <div class="why__intro">
+                    <p class="eyebrow">تعلّم له معنى</p>
+                    <h2 class="section-title" id="why-title">مساحة تساعدك أن تصل إلى ما بعد المعرفة</h2>
+                    <p class="section-description">في SkillUp، كل تجربة تعلّم مصممة لتقربك من هدفك، وتمنحك الثقة لتطبيق
+                        ما تعلمته في الواقع.</p>
+                    <a class="button button--secondary" href="register.html">ابدأ رحلتك الآن <svg class="icon"
+                            aria-hidden="true">
+                            <use href="#icon-arrow"></use>
+                        </svg></a>
+                </div>
+                <div class="why__features">
+                    <article class="feature">
+                        <span class="feature__number">01</span>
+                        <div>
+                            <h3>خبرة من الميدان</h3>
+                            <p>تعلّم مع مدربين يشاركونك خبرة عملية وتجارب حقيقية.</p>
+                        </div>
+                    </article>
+                    <article class="feature">
+                        <span class="feature__number">02</span>
+                        <div>
+                            <h3>تعلّم مرن يناسبك</h3>
+                            <p>تقدم في مسارك في الوقت والمكان اللذين تختارهما.</p>
+                        </div>
+                    </article>
+                    <article class="feature">
+                        <span class="feature__number">03</span>
+                        <div>
+                            <h3>تطبيق يصنع الفرق</h3>
+                            <p>حوّل المفاهيم إلى مهارات ومشاريع تضيفها إلى خبرتك.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">من مجتمعنا</p>
+                    <h2 class="section-title" id="testimonials-title">قصص تعلّم تستحق أن تُروى</h2>
+                    <p class="section-description">تجارب طلاب وجدوا في التعلّم بداية لخطوة جديدة.</p>
+                </div>
+                <div class="testimonials__grid">
+                    <figure class="testimonial">
+                        <div class="testimonial__rating" aria-label="التقييم خمس نجوم"><svg class="icon"
+                                aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg></div>
+                        <blockquote>«الدروس واضحة والتطبيقات قريبة من واقع العمل. أنهيت مساري وأنا أكثر ثقة في بناء
+                            واجهاتي.»</blockquote>
+                        <figcaption class="testimonial__person"><img
+                                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=96&amp;h=96&amp;q=80"
+                                alt="" loading="lazy"><span><strong>سارة محمد</strong><small>مطوّرة
+                                    واجهات</small></span></figcaption>
+                    </figure>
+                    <figure class="testimonial">
+                        <div class="testimonial__rating" aria-label="التقييم خمس نجوم"><svg class="icon"
+                                aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg></div>
+                        <blockquote>«أحببت أنني أتعلم وفق وقتي، والأهم أنني أخرج من كل درس بشيء أستطيع تطبيقه مباشرة.»
+                        </blockquote>
+                        <figcaption class="testimonial__person"><img
+                                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=96&amp;h=96&amp;q=80"
+                                alt="" loading="lazy"><span><strong>عبدالله فهد</strong><small>رائد أعمال</small></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="testimonial">
+                        <div class="testimonial__rating" aria-label="التقييم خمس نجوم"><svg class="icon"
+                                aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg><svg class="icon" aria-hidden="true">
+                                <use href="#icon-star"></use>
+                            </svg></div>
+                        <blockquote>«وجدت مساراً منظماً ومدربين متعاونين. ساعدني ذلك على الانتقال من الفضول إلى أول
+                            مشروع تصميم.»</blockquote>
+                        <figcaption class="testimonial__person"><img
+                                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=96&amp;h=96&amp;q=80"
+                                alt="" loading="lazy"><span><strong>لمى خالد</strong><small>مصممة تجربة
+                                    مستخدم</small></span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand-block">
+                    <a class="brand brand--footer" href="#home" aria-label="SkillUp، الصفحة الرئيسية"><span
+                            class="brand__mark" aria-hidden="true">S</span><span
+                            class="brand__name">Skill<span>Up</span></span></a>
+                    <p>نؤمن أن المعرفة الجيدة قادرة على تغيير المسار. ابدأ تعلّمك معنا، واصنع خطوتك التالية.</p>
+                </div>
+                <div class="footer__column">
+                    <h2>روابط سريعة</h2>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#categories">المجالات</a></li>
+                        <li><a href="#courses">الكورسات</a></li>
+                        <li><a href="#why-skillup">عن SkillUp</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column footer__contact">
+                    <h2>تواصل معنا</h2>
+                    <ul>
+                        <li><svg class="icon" aria-hidden="true">
+                                <use href="#icon-mail"></use>
+                            </svg><a href="mailto:hello@skillup.sa">hello@skillup.sa</a></li>
+                        <li><svg class="icon" aria-hidden="true">
+                                <use href="#icon-phone"></use>
+                            </svg><a href="tel:+966111234567" dir="ltr">+966 11 123 4567</a></li>
+                        <li><svg class="icon" aria-hidden="true">
+                                <use href="#icon-location"></use>
+                            </svg><span>الرياض، المملكة العربية السعودية</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 SkillUp. جميع الحقوق محفوظة.</p><a href="register.html">انضم إلى مجتمع SkillUp <svg
+                        class="icon" aria-hidden="true">
+                        <use href="#icon-arrow"></use>
+                    </svg></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

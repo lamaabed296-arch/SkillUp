@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F8F6F1">
+    <title>إنشاء حساب | SkillUp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/register.js" defer></script>
+</head>
+
+<body class="auth-page">
+    <main class="auth-shell">
+        <a class="brand auth-brand" href="index.html#home" aria-label="العودة إلى SkillUp الرئيسية">
+            <span class="brand__mark" aria-hidden="true">S</span>
+            <span class="brand__name">Skill<span>Up</span></span>
+        </a>
+
+        <section class="auth-card auth-card--register" aria-labelledby="register-title">
+            <div class="auth-card__heading">
+                <p class="eyebrow">خطوتك الأولى</p>
+                <h1 class="auth-card__title" id="register-title">إنشاء حساب</h1>
+                <p class="auth-card__description">أنشئ حسابك وابدأ رحلتك التعليمية.</p>
+            </div>
+
+            <form class="auth-form" data-register-form novalidate>
+                <div class="form-field auth-field">
+                    <label class="input-label" for="register-name">الاسم الكامل</label>
+                    <input class="input" id="register-name" name="name" type="text" autocomplete="name"
+                        placeholder="اكتب اسمك الكامل" required aria-describedby="register-name-error">
+                    <span class="auth-field__error" id="register-name-error" data-error-for="name" hidden></span>
+                </div>
+
+                <div class="form-field auth-field">
+                    <label class="input-label" for="register-email">البريد الإلكتروني</label>
+                    <input class="input" id="register-email" name="email" type="email" inputmode="email"
+                        autocomplete="email" placeholder="name@example.com" required
+                        aria-describedby="register-email-error">
+                    <span class="auth-field__error" id="register-email-error" data-error-for="email" hidden></span>
+                </div>
+
+                <div class="form-field auth-field">
+                    <label class="input-label" for="register-password">كلمة المرور</label>
+                    <div class="auth-password">
+                        <input class="input" id="register-password" name="password" type="password"
+                            autocomplete="new-password" placeholder="أنشئ كلمة مرور" required
+                            aria-describedby="register-password-error">
+                        <button class="auth-password__toggle" type="button" data-password-toggle="register-password"
+                            aria-label="إظهار كلمة المرور" aria-pressed="false">إظهار</button>
+                    </div>
+                    <span class="auth-field__error" id="register-password-error" data-error-for="password"
+                        hidden></span>
+                </div>
+
+                <div class="form-field auth-field">
+                    <label class="input-label" for="register-confirm-password">تأكيد كلمة المرور</label>
+                    <div class="auth-password">
+                        <input class="input" id="register-confirm-password" name="confirmPassword" type="password"
+                            autocomplete="new-password" placeholder="أعد كتابة كلمة المرور" required
+                            aria-describedby="register-confirm-password-error">
+                        <button class="auth-password__toggle" type="button"
+                            data-password-toggle="register-confirm-password" aria-label="إظهار كلمة المرور"
+                            aria-pressed="false">
+                            إظهار
+                        </button>
+                    </div>
+                    <span class="auth-field__error" id="register-confirm-password-error"
+                        data-error-for="confirmPassword" hidden></span>
+                </div>
+
+                <div class="auth-field">
+                    <label class="auth-checkbox auth-checkbox--terms" for="accept-terms">
+                        <input id="accept-terms" name="terms" type="checkbox" required
+                            aria-describedby="register-terms-error">
+                        <span>أوافق على الشروط والأحكام</span>
+                    </label>
+                    <span class="auth-field__error" id="register-terms-error" data-error-for="terms" hidden></span>
+                </div>
+
+                <button class="button button--primary auth-submit" type="submit">إنشاء حساب</button>
+                <p class="auth-message" data-form-message role="status" aria-live="polite" hidden></p>
+            </form>
+
+            <p class="auth-switch">لديك حساب بالفعل؟ <a class="auth-link" href="login.html">سجّل الدخول</a></p>
+            <a class="auth-home-link" href="index.html#home">العودة إلى الصفحة الرئيسية</a>
+        </section>
+    </main>
+</body>
+
+</html>

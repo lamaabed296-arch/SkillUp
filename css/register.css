@@ -1,0 +1,27 @@
+.auth-card--register .auth-card__heading {
+    margin-block-end: var(--space-5);
+}
+
+.auth-card--register .auth-form {
+    gap: var(--space-3);
+}
+
+.auth-checkbox--terms {
+    align-items: flex-start;
+    line-height: var(--line-height-body);
+}
+
+.auth-checkbox--terms input {
+    flex: 0 0 auto;
+    margin-block-start: 0.3rem;
+}
+
+.auth-card--register .auth-submit {
+    margin-block-start: var(--space-1);
+}
+
+@media (max-width: 40rem) {
+    .auth-card--register .auth-form {
+        gap: var(--space-3);
+    }
+}
